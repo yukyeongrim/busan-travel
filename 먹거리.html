@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>신나는 부산여행~@!</title>
+   <style>
+
+            body{
+                color: #333;
+            }    
+            h1{
+                color:coral;
+                font-size: 50px;
+                text-align: center;
+                border-bottom: 3px solid coral;
+                margin: 1px;      
+            }
+
+            #grid{
+                display: grid;
+                grid-template-columns: 150px 1fr;
+            }
+
+            ul{
+                 border-right: 1px solid coral;
+                width: 100px;
+                margin: 13px;
+                padding: 20px;
+                color: coral;
+                text-decoration: none;
+            }
+
+            #aa{
+                margin: 10px;
+            }
+
+            a{
+                text-decoration: none;
+                color: coral;
+            }
+  .clickable-title {
+    cursor: pointer;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+
+  .clickable-title:hover {
+    background-color: #eee;
+  }
+
+  h4.clickable {
+    margin: 4px 0;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+
+  h4.clickable:hover {
+    background-color: #f1f1f1;
+  }
+
+  h4.clickable:active {
+    background-color: #ddd;
+    transform: scale(0.98);
+  }
+  </style>
+    </head>
+    <body>
+        <h1><a href="부산일정.html">BUSAN travel</a></h1>
+        <div id="grid">
+        <ul>
+            <li><a href="부산계획.html">부산계획</a></li>
+            <li><a href="먹거리.html">먹거리</a></li>
+            <li><a href="놀거리.html">놀거리</a></li>
+        </ul>
+        <div id="aa">
+              
+        <h2 onclick="toggleSection('haemok-content')" class="clickable-title">1. 해목</h2>
+        <div id="haemok-content" style="display: none;">
+         <p>
+            ⏰영업시간
+           <br>월-목 11:00 - 15:00 ~ 17:00 - 22:00 (라스트 오더 21:00)  
+             <br>금-일 11:00 - 22:00 (라스트 오더 21:00)
+            <br><br>📞전화번호
+           <br>0507-1385-3730
+            <br><br><sanp style="color:firebrick"><strong>＊</strong>미쉐린가이드 2025 부산 해목 해운대 장어덮밥</sanp>
+
+          <h3>○ 메뉴</h3>
+          
+         <h4 class="clickable"onclick="toggleImage('img1')" style="margin: 4px 0;">▶ 히츠마부시</h4>
+<img id="img1" src="히츠.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+
+<h4 class="clickable"onclick="toggleImage('img2')" style="margin: 4px 0;">▶ 카이센동</h4>
+<img id="img2" src="카이.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+
+<h4 class="clickable"onclick="toggleImage('img3')" style="margin: 4px 0;">▶ 우니동</h4>
+<img id="img3" src="우니.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+
+<h4 class="clickable"onclick="toggleImage('img4')" style="margin: 4px 0;">▶ 특히츠마부시</h4>
+<img id="img4" src="특히츠.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+</p>
+<h3>📌 위치</h3>
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.794636029173!2d129.1597712!3d35.1617421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d5dded1e6f9%3A0xc538eb6be2f5ba99!2z7ZW066qpIO2VtOyatOuMgOygkA!5e0!3m2!1sko!2skr!4v1751212521838!5m2!1sko!2skr"
+  width="65%"
+  height="150"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+    </div>
+          <h2 onclick="toggleSection('chojang-content')" class="clickable-title">2. 초장집</h2>
+<div id="chojang-content" style="display: none;">
+         
+        ⏰영업시간
+        <br>10:00 - 21:00
+        <br><br>📞전화번호
+        <br>0507-1406-4199
+        <h3>○ 메뉴</h3>
+        ▶ <strong>제철회</strong>
+        <h3>📌 위치</h3>
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13048.263165146136!2d129.11724057868415!3d35.154979915998446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ed347d6fad2d%3A0x72fbdcf1b8595d99!2z66-865297Ja066-87Zmc7Ja07KeB7YyQ7J6l!5e0!3m2!1sko!2skr!4v1751218821915!5m2!1sko!2skr"
+  width="65%"
+  height="150"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+
+<h2 onclick="toggleSection('andong-content')" class="clickable-title">3. 안동한우갈비</h2>
+<div id="andong-content" style="display: none;">
+         ⏰영업시간
+        <br>15:00 - 24:00
+        <br><br>📞전화번호
+        <br>051-624-4411
+        <h3>○ 메뉴</h3>
+       <h4 class="clickable" onclick="toggleImage('img5')">▶ 생갈비</h4>
+<img id="img5" src="생.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+
+<h4 class="clickable" onclick="toggleImage('img6')">▶ 안동갈비</h4>
+<img id="img6" src="안동.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+
+<h4 class="clickable" onclick="toggleImage('img7')">▶ 안창살</h4>
+<img id="img7" src="안창.png" style="display:none; width:100%; max-width:400px; border-radius:12px;" />
+        
+<h3>📌 위치</h3>
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.6560575308345!2d129.10876413962012!3d35.140255687716305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568edd8d0295a05%3A0x2fe97c1d4098b186!2z7JWI64-Z7ZWc7Jqw6rCI67mE!5e0!3m2!1sko!2skr!4v1751219050488!5m2!1sko!2skr"
+  width="65%"
+  height="150"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+       </ol>  
+        </div>
+        </div> 
+        <script>
+  function toggleImage(id) {
+    const img = document.getElementById(id);
+    img.style.display = (img.style.display === 'none' || img.style.display === '') ? 'block' : 'none';
+  }
+
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+  }
+</script> 
+    </body>
+   
+</html>
