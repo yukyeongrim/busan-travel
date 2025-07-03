@@ -1,55 +1,213 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <meta charset="utf-8">
-         <title>신나는 부산여행~@!</title>
+<head>
+  <meta charset="utf-8">
+  <title>신나는 부산여행~@!</title>
   <style>
-            h1{
-                color: indianred;
-                font-size: 50px;
-                text-align: center;
-                border-bottom: 3px solid indianred;
-                margin: 1px; 
 
-            }
+    body{
+        color: #333;
+    }     
 
-            #grid{
-                display: grid;
-                grid-template-columns: 150px 1fr;
-            }
+    h1 {
+      color: indianred;
+      font-size: 50px;
+      text-align: center;
+      border-bottom: 3px solid indianred;
+      margin: 1px;
+    }
 
-            ul{
-                 border-right: 1px solid indianred;
-                width: 100px;
-                margin: 13px;
-                padding: 20px;
-                color: indianred;
-                text-decoration: none;
-            }
+    #grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
 
-            #aa{
-                margin: 10px;
-                
-            }
+    ul {
+      border-right: 1px solid indianred;
+      width: 100px;
+      margin: 13px;
+      padding: 20px;
+      color: indianred;
+    }
 
-            a{
-                text-decoration: none;
-                color: indianred;
-            }
+    #aa {
+      margin: 10px;
+    }
 
-         </style>
-    </head>
-    <body>
-        <h1><a href="부산일정.html">BUSAN travel</a></h1>
-        <div id="grid">
-        <ul>
-            <li><a href="부산계획.html">부산계획</a></li>
-            <li><a href="먹거리.html">먹거리</a></li>
-            <li><a href="놀거리.html">놀거리</a></li>
-        </ul>
-        <div id="aa">
-        <img src="gg.png" width="700px">
+    a {
+      text-decoration: none;
+      color: indianred;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 700px;
+      margin: auto;
+      overflow: hidden;
+      border: 2px solid indianred;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.6);
+      border: none;
+      font-size: 30px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+  </style>
+</head>
+<body>
+  <h1><a href="index.html">BUSAN travel</a></h1>
+  <div id="grid">
+    <ul>
+      <li><a href="부산계획.html">부산계획</a></li>
+      <li><a href="먹거리.html">먹거리</a></li>
+      <li><a href="놀거리.html">놀거리</a></li>
+    </ul>
+    <div id="aa">
+
+      <h2>메이크씨</h2>
+        <p>
+            📌주소
+            <br>- 부산 기장군 일광읍 일광로 754 메이크씨
+            <br>⏰영업시간
+            <br>- 매일 09:00-20:00 
+        </p>
+      <div class='slider'>
+        <button class='arrow prev' onclick='moveSlide(this, -1)'>❮</button>
+        <div class='slides' data-index='0'>
+          <img src="메이크씨-1.jpg" alt="메이크씨">
+          <img src="메이크씨-2.jpg" alt="메이크씨">
+          <img src="메이크씨-3.jpg" alt="메이크씨">
+          <img src="메이크씨-4.jpg" alt="메이크씨">
         </div>
-        </div>  
-    </body>    
+        <button class='arrow next' onclick='moveSlide(this, 1)'>❯</button>
+      </div><br><br>
+
+      <h2>피크스퀘어</h2>
+      <p>
+            📌주소
+            <br>- 부산 기장군 기장읍 기장해안로 864 피크스퀘어
+            <br>⏰영업시간
+            <br>- 매일 10:30-21:00 
+            <br>라스트오더 20:30
+        </p>
+      <div class='slider'>
+        <button class='arrow prev' onclick='moveSlide(this, -1)'>❮</button>
+        <div class='slides' data-index='0'>
+          <img src="피크-1.jpg" alt="피크스퀘어">
+          <img src="피크-2.jpg" alt="피크스퀘어">
+          <img src="피크-3.jpg" alt="피크스퀘어">
+          <img src="피크-4.jpg" alt="피크스퀘어">
+          <img src="피크-5.jpg" alt="피크스퀘어">
+          <img src="피크-6.jpg" alt="피크스퀘어">
+        </div>
+        <button class='arrow next' onclick='moveSlide(this, 1)'>❯</button>
+      </div><br><br>
+
+      <h2>코랄라니</h2>
+      <p>
+            📌주소
+            <br>- 부산 기장군 기장읍 기장해안로 32
+            <br>⏰영업시간
+            <br>- 매일 10:00-22:00 
+              <br>라스트오더 21:20
+        </p>
+      <div class='slider'>
+        <button class='arrow prev' onclick='moveSlide(this, -1)'>❮</button>
+        <div class='slides' data-index='0'>
+          <img src="코랄-1.jpg" alt="코랄라니">
+          <img src="코랄-2.jpg" alt="코랄라니">
+          <img src="코랄3.jpg" alt="코랄라니">
+          <img src="코랄빵.jpg" alt="코랄라니">
+        </div>
+        <button class='arrow next' onclick='moveSlide(this, 1)'>❯</button>
+      </div><br><br>
+
+      <h2>리투커피바</h2>
+       <p>
+            📌주소
+            <br>- 부산 기장군 일광읍 문오성길 396 리투커피바
+            <br>⏰영업시간
+            <br>- 매일 10:00-20:00
+        </p>
+      <div class='slider'>
+        <button class='arrow prev' onclick='moveSlide(this, -1)'>❮</button>
+        <div class='slides' data-index='0'>
+          <img src="리투-1.jpg" alt="리투커피바">
+          <img src="리투-2.jpg" alt="리투커피바">
+          <img src="리투-3.jpg" alt="리투커피바">
+          <img src="리투-4.jpg" alt="리투커피바">
+          <img src="리투-5.jpg" alt="리투커피바">
+          <img src="리투-6.jpg" alt="리투커피바">
+          <img src="리투-7.jpg" alt="리투커피바">
+        </div>
+        <button class='arrow next' onclick='moveSlide(this, 1)'>❯</button>
+      </div><br><br>
+
+      <h2>웨이브온</h2>
+      <p>
+            📌주소
+            <br>- 부산 기장군 장안읍 해맞이로 286 
+            <br>⏰영업시간
+            <br>- 매일 10:00-24:00
+        </p>
+      <div class='slider'>
+        <button class='arrow prev' onclick='moveSlide(this, -1)'>❮</button>
+        <div class='slides' data-index='0'>
+          <img src="웨이브-1.jpg" alt="웨이브온">
+          <img src="웨이브-2.jpg" alt="웨이브온">
+          <img src="웨이브-3.jpg" alt="웨이브온">
+          <img src="웨이브-4.jpg" alt="웨이브온">
+          <img src="웨이브-5.jpg" alt="웨이브온">
+          <img src="웨이브-6.png" alt="웨이브온">
+          <img src="웨이브-7.jpg" alt="웨이브온">
+        </div>
+        <button class='arrow next' onclick='moveSlide(this, 1)'>❯</button>
+      </div><br><br>
+
+    </div>
+  </div>
+
+  <script>
+    function moveSlide(button, direction) {
+      const slider = button.closest('.slider');
+      const slides = slider.querySelector('.slides');
+      const images = slides.querySelectorAll('img');
+      let currentIndex = parseInt(slides.getAttribute('data-index')) || 0;
+      const total = images.length;
+
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = total - 1;
+      if (currentIndex >= total) currentIndex = 0;
+
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      slides.setAttribute('data-index', currentIndex);
+    }
+  </script>
+</body>
 </html>
